@@ -1,5 +1,9 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import 'bootstrap/dist/css/bootstrap.css' // Importa los estilos de Bootstrap
+const app = createApp(App);
 
-createApp(App).mount('#app')
+// Verifica el nombre correcto de la variable de entorno (VITE_API_URL)
+app.config.globalProperties.$apiUrl = import.meta.env.VITE_API_URL;
+
+app.mount('#app');
