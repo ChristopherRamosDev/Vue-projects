@@ -5,7 +5,7 @@ import routes from "./routes/index.routes.js";
 dotenv.config()
 const app = express()
 const corsOptions = {
-    origin: 'https://todo-app-mu-orpin.vercel.app'// Asegúrate de cambiar esto a la URL de tu front-end
+    origin: ['http://127.0.0.1:5174', 'https://todo-app-mu-orpin.vercel.app'] // Asegúrate de cambiar esto a la URL de tu front-end
 };
 
 // Habilita CORS con las opciones
